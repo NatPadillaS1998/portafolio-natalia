@@ -1,0 +1,104 @@
+  /****************************************
+  *    Variables
+  *****************************************/
+  :root {
+    /* Colors */
+    --background: #ebebeb;
+    --primary: #031e34;
+    /* Typography */
+    --font-family: "Source Sans Pro";
+  }
+  
+  /* Resets */
+  html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}blockquote,body,figure,h1,h2,h3,h4,h5,h6,hr,li,ol,pre,ul{margin:0;padding:0}ul{list-style:none}button,input,select,textarea{color:inherit;font:inherit;letter-spacing:inherit}button,input,textarea{border:1px solid gray}button{border-radius:0;padding:.75em 1em;background-color:transparent}button *{pointer-events:none}embed,iframe,img,object,video{display:block;max-width:100%}table{table-layout:fixed;width:100%}[hidden]{display:none}noscript{display:block;margin-bottom:1em;margin-top:1em}
+  
+  /****************************************
+  *    Base - Elements
+  *****************************************/
+  html {
+    height: 100%;
+  }
+  
+  body {
+    color: var(--primary);
+    background: var(--background);
+    font-family: var(--font-family);
+    font-size: 100%;
+    font-size: 18px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /* Tipografía */
+  p {
+    font-size: 1em;
+  }
+  
+  h1 {
+    font-size: 2em;
+    line-height: 1.25;
+  }
+  
+  h2 {
+    font-size: 1.6em;
+    line-height: 1.2;
+  }
+  
+  h3 {
+    font-size: 1.4em;
+    line-height: 1.15;
+  }
+  
+  h4 {
+    font-size: 1.2em;
+    line-height: 1;
+  }
+  
+  /* Tipografía responsiva */
+  /* https://css-tricks.com/snippets/css/fluid-typography */
+  body {
+    font-size: calc(16px + (20 - 16) * ((100vw - 720px) / (1400 - 720)));
+  }
+  
+  /****************************************
+  *    Componentes
+  *****************************************/
+  /* Header */
+  .header {
+    h1 {
+  
+    }
+  }
+    /* nav */
+  
+  .nav {
+    ul {
+      li {
+        a {
+  
+        }
+      }
+    }
+  }
+  
+  .main {
+    p {
+  
+    }
+  }
+
+      /* Proyectos */
+  
+  .contact {
+    a {
+  
+    }
+  }
+  
+  .footer {
+    p {
+  
+    }
+  }
