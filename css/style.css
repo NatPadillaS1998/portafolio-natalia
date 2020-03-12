@@ -1,12 +1,21 @@
+  /* Tipografía */
+
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/robotoregular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+  
   /****************************************
   *    Variables
   *****************************************/
   :root {
     /* Colors */
-    --background: #ebebeb;
+    --background: #ffffff;
     --primary: #031e34;
     /* Typography */
-    --font-family: "Source Sans Pro";
+    --font-family: "Roboto";
   }
   
   /* Resets */
@@ -26,7 +35,8 @@
     font-size: 100%;
     font-size: 18px;
   }
-  
+
+
   a {
     text-decoration: none;
   }
@@ -60,45 +70,47 @@
   /* https://css-tricks.com/snippets/css/fluid-typography */
   body {
     font-size: calc(16px + (20 - 16) * ((100vw - 720px) / (1400 - 720)));
+    display: grid;
+    grid-template-columns: 1fr 5fr 4fr;
+    grid-template-rows: 1fr 9fr;
+    grid-template-areas: 
+      "nav . contact"
+      "header main home-img"
   }
+
+
+
   
   /****************************************
   *    Componentes
   *****************************************/
   /* Header */
-  .header {
-    h1 {
-  
-    }
-  }
+.header {
+  grid-area: header;
+}
     /* nav */
-  
-  .nav {
-    ul {
-      li {
-        a {
-  
-        }
-      }
+    .nav {
+      grid-area: nav;
     }
-  }
-  
-  .main {
-    p {
-  
-    }
-  }
 
-      /* Proyectos */
-  
-  .contact {
-    a {
-  
+    /* empty */
+    .empty {
+      grid-area: empty;
     }
-  }
-  
-  .footer {
-    p {
-  
+
+    /* contact */
+    .contact {
+      grid-area: contact;
     }
-  }
+
+    /* nav */
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      grid-area: main;
+    }
+    /* nav */
+    .home-img {
+      grid-area: home-img;
+    }
